@@ -32,7 +32,9 @@ let myObj = {
 
 
 const myFunction  = function() {
-    console.log("Hello world!");
+    console.log("Hello world!");  // function
 }
+
+// link - https://262.ecma-international.org/5.1/ => search table 20 for refrence
 
 

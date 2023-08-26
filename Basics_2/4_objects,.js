@@ -75,3 +75,35 @@ console.log(Object.values(tinderUser));
 console.log(Object.entries(tinderUser)); // every key value pair will going to have it's own array
 
 console.log(tinderUser.hasOwnProperty('sigma')) // to ckeck that if that array or object has that value or not
+
+
+// Practice
+
+const userRegistered = new Object()
+
+userRegistered.name = "Ashutosh"
+userRegistered.class = "Xi"
+userRegistered.age = 23
+userRegistered.id = Symbol(2345)
+
+
+console.log(userRegistered);
+
+console.log(Object.values(userRegistered));
+
+
+// Destructuring
+
+
+const course = {
+    cName : "JS-hindi",
+    price : 999 , 
+    cTeacher : "Hitesh"
+}
+
+console.log(course.cName); 
+
+// there is another way
+
+const {cName , price , cTeacher} = course
+console.log(`hey there welcome to ${cName} , this course is taught by the legend Mr: ${cTeacher} , and it's price is ${price}`);

@@ -107,3 +107,15 @@ console.log(course.cName);
 
 const {cName , price , cTeacher} = course
 console.log(`hey there welcome to ${cName} , this course is taught by the legend Mr: ${cTeacher} , and it's price is ${price}`);
+
+
+// API concept
+
+// JSON file 
+
+// example => 
+
+{
+    "name" : "ashutosh",
+    "age" : 23,
+}

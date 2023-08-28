@@ -105,7 +105,7 @@ console.log(course.cName);
 
 // there is another way
 
-const {cName , price , cTeacher} = course
+const {cName , price , cTeacher} = course // another way of setting objects 
 console.log(`hey there welcome to ${cName} , this course is taught by the legend Mr: ${cTeacher} , and it's price is ${price}`);
 
 

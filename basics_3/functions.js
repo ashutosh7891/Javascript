@@ -52,16 +52,67 @@
 
 // another way
 
-function userLoggedIn(userName) {
+// function userLoggedIn(userName) {
 
 
-    if (!userName) {
-        return "no user logged in"
-    }else {
-        return `${userName}, just logged in`
-    }
+//     if (!userName) {
+//         return "no user logged in"
+//     }else {
+//         return `${userName}, just logged in`
+//     }
 
     
+// }
+
+// console.log(userLoggedIn(""));
+
+// sometime you want to more then one arguements like shopping cart =>
+
+// function shoppingCart(...num1) { // use rest operator rest and spread looks the same but it differs when and where you are using it
+//     return  num1
+// }
+
+// console.log(shoppingCart(200 , 400 , 400));
+
+
+// interview question =>
+
+function shoppingCart(value1 , vaule2 , ...num1) { // what happen to value1 , value2 , what will be the output
+    return num1
 }
 
-console.log(userLoggedIn(""));
+console.log(shoppingCart(200 , 400 , 600 , )); // value1 = 200 , value2 = 400 
+
+
+// how to handle onject in function =>
+
+const user = {
+    name : "Ashutosh" , 
+    price : "$999"
+}
+
+function userFetch(anyObject) {
+
+    console.log(`user name is ${anyObject.name} and price is ${anyObject.price}`);
+
+}
+
+// userFetch(user) // passing arguement as that object 
+// another way
+
+userFetch({
+    name : "Ashutosh",
+    price : 999
+})
+
+// Passing array through function
+
+const userList = [200 , 400 , 100 , 600]
+
+function arrayAccept(anyArray) {
+    return anyArray[2]
+}
+
+// console.log(arrayAccept(userList))
+// another way => 
+console.log(arrayAccept([200 , 400 , 100 , 600]));

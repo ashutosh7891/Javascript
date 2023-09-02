@@ -88,7 +88,7 @@ console.log(happy(13))
 function apple () {
     let score = 100
 
-    if (score >= 100) {
+    if (score > 0) {
         console.log("hey there you are in the league!");
     }else {
         console.log("this score might effect you");

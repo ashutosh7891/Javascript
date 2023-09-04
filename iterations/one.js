@@ -58,3 +58,73 @@ for (let index = 1; index <=20; index++) {
     console.log(`the values are : ${index}`);
     
 }
+array = [1,2,3,4,5]
+
+for (let step = 0; step <= array.length; step++) {
+    // Runs 5 times, with values of step 0 through 4.
+
+    if (step % 2 == 0){
+        console.log("this is even step");
+    }else{
+        console.log(`Walking east one step by ${step}`);
+    }
+    
+  }
+
+  // print a loop with 1 to 10 
+
+  array = [1,2,3,4,5,6,7,8,9,10]
+
+//   for (let i = 0; i < array.length; i++) {
+//     const element = array[i];
+//     console.log(element);
+    
+//   }
+
+
+//sum of 1 to 100
+
+let sum = 0;
+
+for (let i = 1; i <=100; i++) {
+     sum += i
+     console.log(`the sum of one to hundred is ${sum}`);
+    
+}
+
+// print all even numbers
+
+for (let i = 0; i <=20; i++) {
+
+    if (i % 2 == 0) {
+        console.log(`the even numbers are being printed ${i}`);
+    }
+    
+}
+
+// odd numbers
+
+for (let i = 0; i <=20; i++) {
+
+    if (i % 2 == 1) {
+        console.log(`the odd numbers are being printed ${i}`);
+    }
+    
+}
+
+// //
+// count = 10
+
+// for (let i = 10; i >=1; i++) {
+//     console.log(count);
+    
+// }
+
+
+// multiplication table of 5
+
+let count = 5
+
+for (let i = 1; i <=10; i++){
+    console.log(`${count} * ${i} = ${count * i}`);
+}

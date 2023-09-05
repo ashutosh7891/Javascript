@@ -123,8 +123,10 @@ for (let i = 0; i <=20; i++) {
 
 // multiplication table of 5
 
-let count = 5
+let count = 10
 
 for (let i = 1; i <=10; i++){
     console.log(`${count} * ${i} = ${count * i}`);
 }
+
+

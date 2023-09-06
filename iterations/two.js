@@ -16,11 +16,12 @@ while (index  <= 10) {
 let myArray = ['superman' , 'batman' , 'flash' , 'ironman']
 let arr = 0
 
-while (arr < myArray.length) {
-    console.log(`array is :  ${myArray[arr]}`);
-    arr++
+// while (arr < myArray.length) {
+//     console.log(`array is :  ${myArray[arr]}`);
+//     arr+1
+
     
-}
+// }
 
 // do while loop
 
@@ -36,3 +37,15 @@ do {
     }
     
 } while (score <= 10);
+
+
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+  
+  readline.question("What is your number? ", (userInput) => {
+    console.log(`You entered: ${userInput}`);
+    readline.close();
+  });
+  

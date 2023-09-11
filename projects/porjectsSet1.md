@@ -93,3 +93,19 @@ form.addEventListener("submit", (e) => {
   }
 });
 ```
+
+## Project 3 digital Clock
+
+```javascript
+const time = document.querySelector("#clock");
+
+console.log(time);
+
+// set interval is important in terms of interview aspect
+
+setInterval(function () {
+  let date = new Date();
+  // console.log(date.toLocaleTimeString());
+  time.innerHTML = date.toLocaleTimeString();
+}, 1000);
+```

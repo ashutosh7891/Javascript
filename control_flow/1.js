@@ -65,15 +65,15 @@ function isPalindrome(number) {
     const numStr = number.toString();
   
     // Reverse the string
-    const reversedStr = numStr.split('').reverse().join('');
+    const reversedStr = (numStr.split('').reverse().join('')).;
   
     // Compare the original string with the reversed string
     return numStr === reversedStr;
   }
   
   // Test the function with a number
-  const number = "Ash";
-  console.log(number.split().reverse());
+  const number = "Ashhsa";
+  
   if (isPalindrome(number)) {
     console.log(number + " is a palindrome.");
   } else {

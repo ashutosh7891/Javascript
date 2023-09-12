@@ -9,7 +9,6 @@
 ## Project 1
 
 ```javacript
-
 const buttons = document.querySelectorAll('.button');
 const body = document.querySelector('body');
 // console.log(body);
@@ -60,6 +59,8 @@ buttons.forEach((btn) => {
   });
 });
 
+
+
 ```
 
 ## Project 2 BMI Calculator
@@ -108,4 +109,110 @@ setInterval(function () {
   // console.log(date.toLocaleTimeString());
   time.innerHTML = date.toLocaleTimeString();
 }, 1000);
+```
+
+## project 3 - Guess a number
+
+```javascript
+let randomNumber = parseInt(Math.random() * 100 + 1);
+
+const submit = document.querySelector("#subt");
+const userInput = document.querySelector("#guessField");
+
+const prevGuess = document.querySelector(".guesses");
+const lastResult = document.querySelector(".lastResult");
+
+const lowHigh = document.querySelector(".lowOrHi");
+const startover = document.querySelector(".resultParas");
+
+const p = document.createElement("p");
+
+let prevGame = [];
+let numGuesses = 1;
+let gamePlay = true;
+
+if (gamePlay) {
+  submit.addEventListener("click", function (e) {
+    e.preventDefault();
+    const guess = parseInt(userInput.value);
+    console.log(guess);
+    validateGuess(guess);
+  });
+}
+
+function validateGuess(guess) {
+  // validating number
+
+  if (isNaN(guess)) {
+    alert("please enter a valid number");
+  } else if (guess < 1) {
+    alert("please enter a number more than 1");
+  } else if (guess > 100) {
+    alert("please enter a number less then 100");
+  } else {
+    prevGuess.push;
+    if (numGuesses === 11) {
+      displayGuess(guess);
+      displayMessage(`Game over , Random number was ${randomNumber}`);
+      endGame();
+    } else {
+      displayGuess(guess);
+      checkGuess(guess);
+    }
+  }
+}
+
+function checkGuess(guess) {
+  //
+
+  if (guess === randomNumber) {
+    displayMessage(`You guessed it right`);
+    endGame();
+  } else if (guess < randomNumber) {
+    displayMessage(`Number is toooooo low!`);
+  } else if (guess > randomNumber) {
+    displayMessage(`Number is toooooo high!`);
+  }
+}
+
+function displayGuess(guess) {
+  //
+  userInput.value = "";
+  prevGuess.innerHTML += `${guess},`;
+  numGuesses++;
+  lastResult.innerHTML = `${11 - numGuesses}`;
+}
+
+function displayMessage(message) {
+  // interacting with DOM
+  lowHigh.innerHTML = `<h2>${message}</h2>`;
+}
+
+function endGame() {
+  //
+  userInput.value = "";
+  userInput.setAttribute("disabled", "");
+  p.classList.add("button");
+  p.innerHTML = '<h2 id = "newGame">Start new Game</h2>';
+  startover.appendChild(p);
+
+  gamePlay = false;
+  newgame();
+}
+
+function newgame() {
+  //
+  const newGameButton = document.querySelector("#newGame");
+  newGameButton.addEventListener("click", function (e) {
+    randomNumber = parseInt(Math.random() * 100 + 1);
+    let prevGuess = [];
+    numGuesses = 1;
+    prevGuess.innerHTML = "";
+    lastResult.innerHTML = `${11 - numGuesses}`;
+    userInput.removeAttribute("disabled");
+    startover.removeChild(p);
+
+    gamePlay = true;
+  });
+}
 ```

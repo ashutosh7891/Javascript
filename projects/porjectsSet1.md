@@ -111,7 +111,7 @@ setInterval(function () {
 }, 1000);
 ```
 
-## project 3 - Guess a number
+## project 4 - Guess a number
 
 ```javascript
 let randomNumber = parseInt(Math.random() * 100 + 1);

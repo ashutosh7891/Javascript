@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html events</title>
+  </head>
+
+  <body style="background-color: #414141; color: aliceblue">
+    <h2>Amazing image</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // APROACH 1 =>
+
+    // document.getElementById("owl").onclick = (e) => {
+    //   e = alert("hey there this is owl");
+    // };
+
+    // APROACH 2 =>
+
+    // event propogation bubbling up means in tree structure it will from bottom to top
+    // but if it is true then it will go in opposite
+    // const images = document.getElementById("images");
+    // images.addEventListener("click", (e) => {
+    //   console.log("clicked under ul tag");
+    // });
+
+    // const owl = document.getElementById("owl");
+    // owl.addEventListener("click", (e) => {
+    //   console.log("owl clicked");
+    //   // if you want to stop propogation the you need to use this
+    //   e.stopPropagation(); // it will just stop at owl clicked it will not go further away
+    // });
+
+    // document.getElementById("google").addEventListener("click", (e) => {
+    //   e.preventDefault(); // if you don't want to go to this link then you use preventDefault()
+    //   e.stopPropagation();
+    //   console.log("google is clicked");
+    // });
+
+    // learning something about eventlisteners through goal
+    // examples
+    // 1 . whenever i click on a image i want to get removed from the page
+
+    document.getElementById("images").addEventListener(
+      "click",
+      (e) => {
+        console.log(e.target.tagName);
+
+        if (e.target.tagName === "IMG") {
+          console.log(e.target.id);
+          let removeIt = e.target.parentNode;
+          removeIt.remove();
+        }
+      },
+      false
+    );
+
+    //history =>
+    // attachEvent() used in this case
+    //jQuery - on
+
+    // What I need to study in event listners
+
+    // 1. Type , timestamp , default prevented , target , toElement , srcElement , current target , client position related - clientX , client y , screenX , screenY , altKey , controlKey , shiftKey , keyCode ,
+  </script>
+</html>

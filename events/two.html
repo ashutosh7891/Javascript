@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="color: white; background-color: #2f2f2f">
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    // using set time out function to learn stuff about set Timeout
+
+    // changing name to something
+
+    const changeName = function () {
+      document.querySelector("h1").innerHTML = "hey i fooled you after 3 sec";
+      alert("stoped");
+    };
+
+    const changeMe = setTimeout(changeName, 3000);
+
+    // want to stop after pressing stop button through clearTimeOut()
+
+    document.querySelector("#stop").addEventListener("click", () => {
+      clearTimeout(changeMe);
+      console.log("stopped");
+      alert("you pressed stop");
+    });
+
+    // setTimeout(sayAshutosh, 3000);
+
+    // const stopButton = document.getElementById("stop");
+    // const stopButton2 = stopButton.addEventListener("click", (e) => {
+    //   setTimeout(() => {
+    //     alert("hey you have pressed the alert after 3 sec");
+    //   }, 3000);
+    // });
+  </script>
+</html>

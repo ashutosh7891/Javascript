@@ -15,14 +15,15 @@
     // changing name to something
 
     const changeName = function () {
-      document.querySelector("h1").innerHTML = "hey i fooled you after 3 sec";
-      alert("stoped");
+      document.querySelector("h1").innerHTML = "Hey this is Ashutosh";
+      console.log("this is my hosting day so far");
     };
 
     const changeMe = setTimeout(changeName, 3000);
 
     // want to stop after pressing stop button through clearTimeOut()
 
+    // stoping event from happening =>
     document.querySelector("#stop").addEventListener("click", () => {
       clearTimeout(changeMe);
       console.log("stopped");

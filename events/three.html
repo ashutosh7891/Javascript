@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="color: white; background-color: #c5cae8">
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const sayDate = (str) => {
+      console.log(str, Date.now());
+    };
+
+    const sayMyName = setInterval(sayDate, 1000, "hey there");
+
+    clearInterval(sayMyName);
+  </script>
+</html>

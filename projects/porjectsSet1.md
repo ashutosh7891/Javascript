@@ -216,3 +216,47 @@ function newgame() {
   });
 }
 ```
+
+## project 5 - unlimited colours
+
+```javascript
+// generate a random colot
+
+const randomColor = () => {
+  let hex = "0123456789ABCDEF"; // hex code value range
+  let color = "#";
+
+  for (i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
+// console.log(randomColor());
+
+// start and stop refrence
+
+// start refrence
+
+let intervalId;
+
+const startChangingColor = function (str) {
+  if (!intervalId) {
+    intervalId = setInterval(changeBgColor, 2000);
+  }
+
+  function changeBgColor() {
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+
+const stopChangingColor = function () {
+  clearTimeout(intervalId);
+  intervalId = null;
+};
+
+document.getElementById("start").addEventListener("click", startChangingColor);
+
+// stop refrence
+document.getElementById("stop").addEventListener("click", stopChangingColor);
+```

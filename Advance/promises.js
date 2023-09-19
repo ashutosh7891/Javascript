@@ -8,7 +8,7 @@ const promiseOne = new Promise((resolve , reject) => {
         console.log('Async task is completed')
         resolve()
         
-    },1000)
+    },13000)
 
 })
 
@@ -25,7 +25,7 @@ new Promise((resolve , reject)=>{
     setTimeout(()=>{
         console.log('async2 is done')
         resolve()
-    },1000)
+    },11000)
     
 }).then(()=>{
     console.log('Async 2 resolved')
@@ -37,7 +37,7 @@ new Promise((resolve , reject)=>{
 const promiseThree = new Promise((resolve , reject) => {
     setTimeout(() => {
         resolve({username : "Ashutoshyadav" , email : "ashutoshyadav6969@gmail.com"}) // mainly there will be data to be given where the promise will consume  
-    },1000)
+    },9000)
 })
 
 promiseThree.then((user) => {
@@ -56,7 +56,7 @@ const  promiseFour = new Promise((resolve , reject) => {
         }else{
             reject('ERROR: something went wrong')
         }
-    } , 2000)
+    } , 7000)
 })
 
 // promiseFour
@@ -84,7 +84,7 @@ const promiseFive = new Promise((resolve,reject)=>{
         }else{
             reject('ERROR: JS went wrong')
         }
-    } , 2000)
+    } , 5000)
 })
 
 async function consumePromiseFive() {

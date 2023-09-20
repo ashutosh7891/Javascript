@@ -78,9 +78,19 @@ String.prototype.truelength = function(){
 
 }
 
+Array.prototype.truelength2 = function(){
+    
+    console.log(`${this}`); // Ashutosh yadav
+    console.log(`true length of name is: ${this.trim().length}`) // true length of name is: 14
+    // console.log(`${this.name}`) // undefined => obsulite property not in use
+
+}
+
 console.log(anotherusername.truelength())
 
 // now we wll see how this keyword is working
 
 "icetea".truelength()
 "coffee".truelength()
+
+heroes[1].truelength()
